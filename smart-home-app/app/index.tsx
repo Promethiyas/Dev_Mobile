@@ -23,7 +23,7 @@ export default function App() {
         <Text>          </Text>
         <View  style={styles.parent}>
             <Image source={PlaceholderImage} style={styles.image} />
-            <View style = {{marginTop: 15}}>
+            <View style = {{marginTop: 10}}>
               <Text style={styles.text}>  Hi Donald</Text>
               <Text style={{fontStyle: 'italic'}}>  Have a good day!</Text>
               <Text style={{fontSize:12, fontWeight:'bold'}}>☀️ Sunday</Text>
@@ -33,7 +33,7 @@ export default function App() {
         <View>
             <Text style={{marginLeft: "40%", fontWeight: "bold", fontSize: 22, color: "brown"}}>{"Living Room"}</Text>
             <View style={{ flexDirection: 'row', marginLeft: 15}}>
-              {isEnabled === true ? <LinearGradient start={[0, 0.5]} end={[1, 0.5]} colors={['#1C4C9E', '#00F0FF']} style={styles.gradient}>
+              {isEnabled === true ? <LinearGradient start={[0, 0]} end={[1, 1]} colors={['#1C4C9E', '#00F0FF']} style={styles.gradient}>
                 <View style ={styles.square}>
                     <Text style={{color: "white"}}>💡{"\n"}Lighting</Text>
                     <Switch style={{marginLeft: "20%"}} trackColor={{false: '#767577', true: '#81b0ff'}} thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'} ios_backgroundColor="#3e3e3e" onValueChange={toggleSwitch} value={isEnabled} />
@@ -58,7 +58,7 @@ export default function App() {
                   {isEnabled === false ? <Text style={{color: "blue"}}>{"Off"}</Text>: null}
                 </View>
             </View> : null}
-              {isEnabled1 === true ? <LinearGradient start={[0, 0.5]} end={[1, 0.5]} colors={['#1C4C9E', '#00F0FF']} style={styles.gradient}>
+              {isEnabled1 === true ? <LinearGradient start={[0, 0]} end={[1, 1]} colors={['#1C4C9E', '#00F0FF']} style={styles.gradient}>
                 <View style ={styles.square}>
                     <Text style={{color: "white"}}>♨️ {"\n"} Microwave</Text>
                     <Switch style={{marginLeft: "10%"}} trackColor={{false: '#767577', true: '#81b0ff'}} thumbColor={isEnabled1 ? '#f5dd4b' : '#f4f3f4'} ios_backgroundColor="#3e3e3e" onValueChange={toggleSwitch1} value={isEnabled1}  />
@@ -84,7 +84,7 @@ export default function App() {
 
 
             <View style={{flexDirection: 'row',marginLeft: 15}}>
-            {isEnabled2 === true ? <LinearGradient start={[0, 0.5]} end={[1, 0.5]} colors={['#1C4C9E', '#00F0FF']} style={styles.gradient}>
+            {isEnabled2 === true ? <LinearGradient start={[0, 0]} end={[1, 1]} colors={['#1C4C9E', '#00F0FF']} style={styles.gradient}>
                 <View style ={styles.square}>
                     <Text style={{color: "white"}}>✇ {"\n"}Ventilator</Text>
                     <Switch style={{marginLeft: "20%"}} trackColor={{false: '#767577', true: '#81b0ff'}} thumbColor={isEnabled2 ? '#f5dd4b' : '#f4f3f4'} ios_backgroundColor="#3e3e3e" onValueChange={toggleSwitch2} value={isEnabled2}  />
@@ -108,7 +108,7 @@ export default function App() {
 
 
 
-                {isEnabled3 === true ? <LinearGradient start={[0, 0.5]} end={[1, 0.5]} colors={['#1C4C9E', '#00F0FF']} style={styles.gradient}>
+                {isEnabled3 === true ? <LinearGradient start={[0, 0]} end={[1, 1]} colors={['#1C4C9E', '#00F0FF']} style={styles.gradient}>
                 <View style ={styles.square}>
                     <Text style={{color: "white"}}>🍽️{"\n"}Dishwasher</Text>
                     <Switch style={{marginLeft: "10%"}} trackColor={{false: '#767577', true: '#81b0ff'}} thumbColor={isEnabled3 ? '#f5dd4b' : '#f4f3f4'} ios_backgroundColor="#3e3e3e" onValueChange={toggleSwitch3} value={isEnabled3} />
@@ -134,7 +134,7 @@ export default function App() {
 
             </View>
             <View style={{flexDirection: 'row',marginLeft: 15}}>
-            {isEnabled4 === true ? <LinearGradient start={[0, 0.5]} end={[1, 0.5]} colors={['#1C4C9E', '#00F0FF']} style={styles.gradient}>
+            {isEnabled4 === true ? <LinearGradient start={[0, 0]} end={[1, 1]} colors={['#1C4C9E', '#00F0FF']} style={styles.gradient}>
                 <View style ={styles.square}>
                     <Text style={{color: "white"}}>☕{"\n"}CofeeMaker</Text>
                     <Switch style={{marginLeft: "10%"}} trackColor={{false: '#767577', true: '#81b0ff'}} thumbColor={isEnabled4 ? '#f5dd4b' : '#f4f3f4'} ios_backgroundColor="#3e3e3e" onValueChange={toggleSwitch4} value={isEnabled4} />
@@ -187,7 +187,7 @@ const styles = StyleSheet.create({
   image: {
     width: 50,
     height: 50,
-    borderRadius: 18,
+    borderRadius: 100,
     marginTop: 5,
     marginLeft: 5,
 
@@ -197,12 +197,13 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   square: {
-      width: 150,
-      height: 150,
+      width: 160,
+      height: 160,
       //borderWidth: 1,
       borderRadius: 11,
       flexDirection: 'row',
       flexWrap: 'wrap',
+      padding: "5%"
     },
   gradient:{
       marginLeft : 20,
@@ -210,15 +211,16 @@ const styles = StyleSheet.create({
       borderRadius: 11
   },
   square1: {
-    width: 150,
-    height: 150,
+    width: 160,
+    height: 160,
     //borderWidth: 1,
     borderRadius: 11,
     flexDirection: 'row',
     flexWrap: 'wrap',
     marginLeft : 20,
     marginTop: 20,
-    backgroundColor: "white"
+    backgroundColor: "white",
+    paddingLeft: "5%"
   },
   footerlink:{
     fontSize:26,
