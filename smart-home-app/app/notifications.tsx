@@ -4,7 +4,7 @@ import { Link } from "expo-router";
 export default function Lightning(){
   return (
     <View style= {{flex: 1,backgroundColor: '#FFFAFA'}}>
-      <Text style={{marginLeft: "40%", fontWeight: "bold", fontSize: 22, color: "brown"}}>{"Lighting"}</Text>
+      <Text style={{marginLeft: "40%", fontWeight: "bold", fontSize: 22, color: "brown"}}>{"Notifications"}</Text>
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
           <Link href={"/"}><Text>{"Retour"}</Text></Link>
       </View>

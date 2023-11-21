@@ -12,8 +12,14 @@ export default function App() {
    const toggleSwitch = () => setIsEnabled(previousState => !previousState);
    const [isEnabled1, setIsEnabled1] = useState(false);
    const toggleSwitch1 = () => setIsEnabled1(previousState1 => !previousState1);
+   const [isEnabled2, setIsEnabled2] = useState(false);
+   const toggleSwitch2 = () => setIsEnabled2(previousState2 => !previousState2);
+   const [isEnabled3, setIsEnabled3] = useState(false);
+   const toggleSwitch3 = () => setIsEnabled3(previousState3 => !previousState3);
+   const [isEnabled4, setIsEnabled4] = useState(false);
+   const toggleSwitch4 = () => setIsEnabled4(previousState4 => !previousState4);
   return (
-    <View style= {{flex: 1,backgroundColor: 'white'}}>
+    <View style= {{flex: 1,backgroundColor: '#FFFAFA'}}>
         <Text>          </Text>
         <View  style={styles.parent}>
             <Image source={PlaceholderImage} style={styles.image} />
@@ -46,7 +52,7 @@ export default function App() {
                 <View style ={styles.square1}>
                 <Text style={{color: "blue"}}>💡{"\n"}Lighting</Text>
                 <Switch style={{marginLeft: "20%"}} trackColor={{false: '#767577', true: '#81b0ff'}} thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'} ios_backgroundColor="#3e3e3e" onValueChange={toggleSwitch} value={isEnabled} />
-                <Text style={{color: "blue"}}>⚡Energy 16.4</Text>
+                <Text style={{color: "blue"}}>⚡Energy 0</Text>
                 <View style={{width: 180, height: 25, marginLeft: '2.5%', marginTop: '10%'}}></View>
                 <View style = {{marginBottom:"5%"}}>
                   {isEnabled === false ? <Text style={{color: "blue"}}>{"Off"}</Text>: null}
@@ -56,7 +62,9 @@ export default function App() {
                 <View style ={styles.square}>
                     <Text style={{color: "white"}}>♨️ {"\n"} Microwave</Text>
                     <Switch style={{marginLeft: "10%"}} trackColor={{false: '#767577', true: '#81b0ff'}} thumbColor={isEnabled1 ? '#f5dd4b' : '#f4f3f4'} ios_backgroundColor="#3e3e3e" onValueChange={toggleSwitch1} value={isEnabled1}  />
-                    <View style = {{marginTop:"40%"}}>
+                    <Text style={{color: "white"}}>⚡Energy 7.2</Text>
+                    <View style={{width: 180, height: 25, marginLeft: '2.5%', marginTop: '10%'}}></View>
+                    <View>
                       {isEnabled1 === true ? <Text style={{color: "white"}}>{"On"}</Text> : null}
                     </View>
                 </View>
@@ -65,7 +73,9 @@ export default function App() {
                 <View style ={styles.square1}>
                     <Text style={{color: "blue"}}>♨️ {"\n"} Microwave</Text>
                     <Switch style={{marginLeft: "10%"}} trackColor={{false: '#767577', true: '#81b0ff'}} thumbColor={isEnabled1 ? '#f5dd4b' : '#f4f3f4'} ios_backgroundColor="#3e3e3e" onValueChange={toggleSwitch1} value={isEnabled1}  />
-                    <View style = {{marginTop:"40%"}}>
+                    <Text style={{color: "blue"}}>⚡Energy 0</Text>
+                    <View style={{width: 180, height: 25, marginLeft: '2.5%', marginTop: '10%'}}></View>
+                    <View>
                       {isEnabled1 === false ? <Text style={{color: "blue"}}>{"Off"}</Text> : null}
                     </View>
                 </View>: null}
@@ -74,20 +84,94 @@ export default function App() {
 
 
             <View style={{flexDirection: 'row',marginLeft: 15}}>
-              <LinearGradient start={[0, 0.5]} end={[1, 0.5]} colors={['#1C4C9E', '#00F0FF']} style={styles.gradient}>
-                <View style ={styles.square}><Text>{"3"}</Text></View>
-              </LinearGradient>
-              <LinearGradient start={[0, 0.5]} end={[1, 0.5]} colors={['#1C4C9E', '#00F0FF']} style={styles.gradient}>
-                <View style ={styles.square}><Text>{"4"}</Text></View>
-              </LinearGradient>
+            {isEnabled2 === true ? <LinearGradient start={[0, 0.5]} end={[1, 0.5]} colors={['#1C4C9E', '#00F0FF']} style={styles.gradient}>
+                <View style ={styles.square}>
+                    <Text style={{color: "white"}}>✇ {"\n"}Ventilator</Text>
+                    <Switch style={{marginLeft: "20%"}} trackColor={{false: '#767577', true: '#81b0ff'}} thumbColor={isEnabled2 ? '#f5dd4b' : '#f4f3f4'} ios_backgroundColor="#3e3e3e" onValueChange={toggleSwitch2} value={isEnabled2}  />
+                    <Text style={{color: "white"}}>⚡Energy 2.8</Text>
+                    <View style={{width: 180, height: 25, marginLeft: '2.5%', marginTop: '10%'}}></View>
+                    <View>
+                      {isEnabled2 === true ? <Text style={{color: "white"}}>{"On"}</Text> : null}
+                    </View>
+                </View>
+              </LinearGradient>: null}
+              {isEnabled2 === false ? 
+                <View style ={styles.square1}>
+                    <Text style={{color: "blue"}}>✇ {"\n"}Ventilator</Text>
+                    <Switch style={{marginLeft: "20%"}} trackColor={{false: '#767577', true: '#81b0ff'}} thumbColor={isEnabled2 ? '#f5dd4b' : '#f4f3f4'} ios_backgroundColor="#3e3e3e" onValueChange={toggleSwitch2} value={isEnabled2}  />
+                    <Text style={{color: "blue"}}>⚡Energy 0</Text>
+                    <View style={{width: 180, height: 25, marginLeft: '2.5%', marginTop: '10%'}}></View>
+                    <View>
+                      {isEnabled2 === false ? <Text style={{color: "blue"}}>{"Off"}</Text> : null}
+                    </View>
+                </View>: null}
+
+
+
+                {isEnabled3 === true ? <LinearGradient start={[0, 0.5]} end={[1, 0.5]} colors={['#1C4C9E', '#00F0FF']} style={styles.gradient}>
+                <View style ={styles.square}>
+                    <Text style={{color: "white"}}>🍽️{"\n"}Dishwasher</Text>
+                    <Switch style={{marginLeft: "10%"}} trackColor={{false: '#767577', true: '#81b0ff'}} thumbColor={isEnabled3 ? '#f5dd4b' : '#f4f3f4'} ios_backgroundColor="#3e3e3e" onValueChange={toggleSwitch3} value={isEnabled3} />
+                    <Text style={{color: "white"}}>⚡Energy 10.5</Text>
+                    <View style={{width: 180, height: 25, marginLeft: '2.5%', marginTop: '10%'}}></View>
+                    <View style = {{marginBottom:"5%"}}>
+                      {isEnabled3 === true ? <Text style={{color: "white"}}>{"On"}</Text>: null}
+                    </View>
+                </View>
+              </LinearGradient>: null}
+              {isEnabled3 === false ?
+                <View style ={styles.square1}>
+                <Text style={{color: "blue"}}>🍽️{"\n"}Dishwasher</Text>
+                <Switch style={{marginLeft: "10%"}} trackColor={{false: '#767577', true: '#81b0ff'}} thumbColor={isEnabled3 ? '#f5dd4b' : '#f4f3f4'} ios_backgroundColor="#3e3e3e" onValueChange={toggleSwitch3} value={isEnabled3} />
+                <Text style={{color: "blue"}}>⚡Energy 0</Text>
+                <View style={{width: 180, height: 25, marginLeft: '2.5%', marginTop: '10%'}}></View>
+                <View style = {{marginBottom:"5%"}}>
+                  {isEnabled3 === false ? <Text style={{color: "blue"}}>{"Off"}</Text>: null}
+                </View>
+            </View> : null}
+
+
+
             </View>
             <View style={{flexDirection: 'row',marginLeft: 15}}>
-            <LinearGradient start={[0, 0]} end={[1, 1]} colors={['#1C4C9E', '#00F0FF']} style={styles.gradient}>
+            {isEnabled4 === true ? <LinearGradient start={[0, 0.5]} end={[1, 0.5]} colors={['#1C4C9E', '#00F0FF']} style={styles.gradient}>
                 <View style ={styles.square}>
-                  <Text>{"5"}</Text>
+                    <Text style={{color: "white"}}>☕{"\n"}CofeeMaker</Text>
+                    <Switch style={{marginLeft: "10%"}} trackColor={{false: '#767577', true: '#81b0ff'}} thumbColor={isEnabled4 ? '#f5dd4b' : '#f4f3f4'} ios_backgroundColor="#3e3e3e" onValueChange={toggleSwitch4} value={isEnabled4} />
+                    <Text style={{color: "white"}}>⚡Energy 4.6</Text>
+                    <View style={{width: 180, height: 25, marginLeft: '2.5%', marginTop: '10%'}}></View>
+                    <View style = {{marginBottom:"5%"}}>
+                      {isEnabled4 === true ? <Text style={{color: "white"}}>{"On"}</Text>: null}
+                    </View>
                 </View>
-              </LinearGradient>
+              </LinearGradient>: null}
+              {isEnabled4 === false ?
+                <View style ={styles.square1}>
+                <Text style={{color: "blue"}}>☕{"\n"}CofeeMaker</Text>
+                <Switch style={{marginLeft: "10%"}} trackColor={{false: '#767577', true: '#81b0ff'}} thumbColor={isEnabled4 ? '#f5dd4b' : '#f4f3f4'} ios_backgroundColor="#3e3e3e" onValueChange={toggleSwitch4} value={isEnabled4} />
+                <Text style={{color: "blue"}}>⚡Energy 0</Text>
+                <View style={{width: 180, height: 25, marginLeft: '2.5%', marginTop: '10%'}}></View>
+                <View style = {{marginBottom:"5%"}}>
+                  {isEnabled4 === false ? <Text style={{color: "blue"}}>{"Off"}</Text>: null}
+                </View>
+            </View> : null}
             </View>
+        </View>
+        <View style={{flex: 1}}>
+          <View style={{position: 'absolute', left: 0, right: 0, bottom: 0, padding: "5%", borderRadius: 11, flexDirection: "row",backgroundColor: "white"}}>
+            <View style={styles.footerview}>
+              <Link href={"/"}><Text style={styles.footerlink}>🏠</Text></Link>
+            </View>
+            <View style={styles.footerview}>
+              <Link href={"/scenario"}><Text style={styles.footerlink}>☀️</Text></Link>
+            </View>
+            <View style={styles.footerview}>
+              <Link href={"/notifications"}><Text style={styles.footerlink}>🔔</Text></Link>
+            </View>
+            <View style={styles.footerview}>
+              <Link href={"/user"}><Text style={styles.footerlink}>🪪</Text></Link>
+            </View>
+          </View>
         </View>
     </View>
   );
@@ -115,7 +199,7 @@ const styles = StyleSheet.create({
   square: {
       width: 150,
       height: 150,
-      borderWidth: 1,
+      //borderWidth: 1,
       borderRadius: 11,
       flexDirection: 'row',
       flexWrap: 'wrap',
@@ -128,11 +212,19 @@ const styles = StyleSheet.create({
   square1: {
     width: 150,
     height: 150,
-    borderWidth: 1,
+    //borderWidth: 1,
     borderRadius: 11,
     flexDirection: 'row',
     flexWrap: 'wrap',
     marginLeft : 20,
     marginTop: 20,
+    backgroundColor: "white"
   },
+  footerlink:{
+    fontSize:26,
+  },
+  footerview:{
+    marginLeft:"12%"
+  }
+
 });
