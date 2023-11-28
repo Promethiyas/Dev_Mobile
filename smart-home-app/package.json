@@ -10,8 +10,8 @@
     "ts:check": "tsc"
   },
   "resolutions": {
-    "metro": "0.76.0",
-    "metro-resolver": "0.76.0"
+    "metro": "0.76.7",
+    "metro-resolver": "0.76.7"
   },
   "dependencies": {
     "@expo/webpack-config": "^19.0.0",
