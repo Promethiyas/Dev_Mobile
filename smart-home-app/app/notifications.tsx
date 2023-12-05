@@ -1,7 +1,10 @@
-import { StyleSheet, Text, View,ScrollView} from 'react-native';
+import { StyleSheet, Text, View,ScrollView, Image} from 'react-native';
 import { Link } from "expo-router";
 import React, {  useState, useEffect} from 'react';
 import Axios from "axios";
+
+const loupe = require('../ressources/loupe.png');
+const menu = require('../ressources/menu.png');
 
 export default function notifications(){
   const [products, setProducts] = useState([]);
@@ -22,6 +25,23 @@ export default function notifications(){
       <Text style={{marginLeft: "40%", fontWeight: "bold", fontSize: 22, color: "brown"}}>{"Notifications"}</Text>
       <View style={{flex: 1}}>
           <ScrollView>
+            <View style={{flexDirection: 'row'}}>
+              <Image source={loupe}/>
+              <Text>                                                                                          </Text>
+              <View style={{marginTop: '3%', backgroundColor: 'white', borderColor: 'white' ,borderRadius: 25}}>
+                <Image source={menu}  />
+              </View>
+            </View>
+            <View style={{flexDirection: 'row'}}>
+              <Text style= {{marginLeft: '10%', color: '#FFFAFA',}}>{"\n\rAll Notification"}</Text>
+              <Text style= {{marginLeft: '12%', color: '#FFFAFA'}}>{"\n\rUnread"}</Text>
+              <Text style= {{marginLeft: '12%', color: '#FFFAFA'}}>{"\n\rReminder"}</Text>
+            </View>
+            <View style={{flexDirection: 'row'}}>
+              <Text style= {{marginLeft: '10%', color: '#1C4C9E', textDecorationLine: 'underline'}}>{"\n\rAll Notification"}</Text>
+              <Text style= {{marginLeft: '12%', color: 'grey'}}>{"\n\rUnread"}</Text>
+              <Text style= {{marginLeft: '12%', color: 'grey'}}>{"\n\rReminder"}</Text>
+            </View>
             {products.map((product) => (
               <View style= {{borderWidth: 2, borderColor: 'black', marginTop: '5%', borderRadius: 20}}>
                 <Text style={{textAlign: 'center'}}>{product.title}</Text>
