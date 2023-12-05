@@ -3,12 +3,17 @@ import React, {  useState, useEffect } from 'react';
 import { Link } from "expo-router";
 import { LinearGradient } from 'expo-linear-gradient';
 import Svg, { Path } from "react-native-svg"
+import { useFonts } from 'expo-font';
+
 const whiteAsset = require('../ressources/ampouleallume.png');
 const whiteInActiveAsset = require('../ressources/ampoule.png')
 const purpleAsset = require('../ressources/ampouleallumeViolet.png');
 const blueAsset = require('../ressources/ampouleallumebleu.png')
 const greenAsset = require('../ressources/ampouleallumeVert.png')
 const redAsset = require('../ressources/ampouleallumeRouge.png')
+const barrefond = require('../ressources/barre.png')
+
+
 
 const ampoule = { 
   white: {
@@ -30,6 +35,9 @@ const ampoule = {
 
 
 export default function Lightning(){
+  const [fontsLoaded] = useFonts({
+    'iransans': require('../ressources/FontsFree-Net-ir_sans.ttf'),
+  });
   const [isEnabled, setIsEnabled] = useState(false);
    const toggleSwitch = () => setIsEnabled(previousState => !previousState);
   
@@ -38,6 +46,9 @@ export default function Lightning(){
   return (
     //#0D2639
     <View style= {{flex: 1,backgroundColor: '#0D2639'}}> 
+      <View style={{ position:'absolute',  marginTop:'50%', marginLeft:'80%'}}>
+        <Image source={barrefond} />
+      </View>
       <View style= {{flexDirection:"row"}}>
         <Link href="/"><Text style={{color:"white", fontSize:25}}>{"< Lighting"}</Text></Link>
       </View> 
@@ -64,12 +75,12 @@ export default function Lightning(){
               <Path d="M15.1706 17.9794C15.1662 17.475 15.2682 16.9755 15.4698 16.5132C15.6713 16.0509 15.9681 15.6362 16.3406 15.2962C17.3246 14.4173 18.0187 13.2605 18.3311 11.9786C18.6435 10.6967 18.5595 9.35025 18.0902 8.11715C17.6209 6.88405 16.7884 5.82242 15.7028 5.07262C14.6172 4.32282 13.3296 3.92016 12.0102 3.91789C10.6908 3.91561 9.4018 4.31383 8.3136 5.05988C7.2254 5.80593 6.38925 6.86468 5.9157 8.09616C5.44216 9.32763 5.35352 10.6738 5.6615 11.9568C5.96949 13.2397 6.6596 14.3989 7.64058 15.2812C8.01663 15.6226 8.31677 16.0392 8.52155 16.504C8.72633 16.9688 8.83119 17.4715 8.82933 17.9794V18H15.1706V17.9794Z"/>
             </Svg>
           </View>
-          <Text style={{color:"white"}}>{"   Lighting"}</Text>
+          <Text style={{color:"white", fontFamily:'iransans'}}>{"   Lighting"}</Text>
           <Switch style={{position:'absolute', marginLeft:'30%', marginTop:'20%'}} trackColor={{false: '#767577', true: '#81b0ff'}} thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'} ios_backgroundColor="#3e3e3e" onValueChange={toggleSwitch} value={isEnabled} />
         </View>
       </LinearGradient>
       <View style={{position: 'absolute', left: 0, right: 0, bottom: 0, padding: "5%", borderRadius: 11,backgroundColor: "white",height:"15%"}}>
-        <Text>Light Color</Text>
+        <Text style={{fontFamily:'iransans'}}>Light Color</Text>
         <View style={{flexDirection: "row"}}>
           <View style={{marginTop:"5%",marginLeft:"10%"}}>
             <TouchableOpacity onPress={() => setSelected(ampoule.red)} style={{backgroundColor:"red", borderRadius:100, height:30,width:30,borderWidth:1}}>
