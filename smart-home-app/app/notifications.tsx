@@ -5,7 +5,9 @@ import Axios from "axios";
 import { useFonts } from 'expo-font';
 import { SvgUri } from 'react-native-svg';
 import Svg, { Path } from "react-native-svg"
-
+import { LogBox } from 'react-native';
+LogBox.ignoreLogs(['Asyncstorage: ...']); // Ignore log notification by message
+LogBox.ignoreAllLogs(); //Ignore all log notifications
 
 const loupe = require('../ressources/loupe.png');
 const menu = require('../ressources/menu.png');
@@ -46,7 +48,6 @@ export default function notifications(){
   }, []);
   return (
     <View style= {{flex: 1,backgroundColor: '#EBF2F6'}}>
-      <Text style={{marginLeft: "40%", fontWeight: "bold", fontSize: 22, color: "brown"}}>{"Notifications"}</Text>
       <View style={{flex: 1}}>
           <ScrollView>
             <View style={{flexDirection: 'row'}}>

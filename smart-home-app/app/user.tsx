@@ -1,6 +1,10 @@
 import { StyleSheet, Text, View} from 'react-native';
 import { Link } from "expo-router";
 import Svg, { Path } from "react-native-svg"
+import { LogBox } from 'react-native';
+LogBox.ignoreLogs(['Asyncstorage: ...']); // Ignore log notification by message
+LogBox.ignoreAllLogs(); //Ignore all log notifications
+
 export default function Lightning(){
   return (
     <View style= {{flex: 1,backgroundColor: '#FFFAFA'}}>

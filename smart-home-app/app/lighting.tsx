@@ -4,6 +4,9 @@ import { Link } from "expo-router";
 import { LinearGradient } from 'expo-linear-gradient';
 import Svg, { Path } from "react-native-svg"
 import { useFonts } from 'expo-font';
+import { LogBox } from 'react-native';
+LogBox.ignoreLogs(['Asyncstorage: ...']); // Ignore log notification by message
+LogBox.ignoreAllLogs(); //Ignore all log notifications
 
 const whiteAsset = require('../ressources/ampouleallume.png');
 const whiteInActiveAsset = require('../ressources/ampoule.png')
