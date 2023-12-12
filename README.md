@@ -23,4 +23,4 @@ Voici un markdown pour présenter l'affichage sur Android.
 
 ## Notifications
 
-![](https://cdn.discordapp.com/attachments/905799668938723329/1184135357764223166/Screenshot_2023-12-12-15-10-32-406_host.exp.exponent.jpg?ex=658adefd&is=657869fd&hm=332f6d1b4b4b0e700e5159b2a06f2cfbcf7bd7524d94a990329bcc2bafe9dbe1& =300x700)
+![](https://cdn.discordapp.com/attachments/905799668938723329/1184135357764223166/Screenshot_2023-12-12-15-10-32-406_host.exp.exponent.jpg?ex=658adefd&is=657869fd&hm=332f6d1b4b4b0e700e5159b2a06f2cfbcf7bd7524d94a990329bcc2bafe9dbe1&)
