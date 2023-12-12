@@ -5,7 +5,7 @@ Voici un markdown pour présenter l'affichage sur Android.
 ## Premiere page
 **Ici le rendu quand on lance l'application.**
 
-![](https://cdn.discordapp.com/attachments/905799668938723329/1184135355197313125/Screenshot_2023-12-12-15-09-50-383_host.exp.exponent.jpg?ex=658adefc&is=657869fc&hm=116641ed76df69b225be938f955b80ec0ac8677614ad32d099a205f3f4e99a34&=300x700)
+<img src="https://cdn.discordapp.com/attachments/905799668938723329/1184135355197313125/Screenshot_2023-12-12-15-09-50-383_host.exp.exponent.jpg?ex=658adefc&is=657869fc&hm=116641ed76df69b225be938f955b80ec0ac8677614ad32d099a205f3f4e99a34&" width="300" height="700">
 **Ici le rendu quand on actionne les switchs.**
 
 ![](https://cdn.discordapp.com/attachments/905799668938723329/1184135355453153280/Screenshot_2023-12-12-15-09-55-965_host.exp.exponent.jpg?ex=658adefc&is=657869fc&hm=e28bd82a68885286422967868ce108aa878f529e3141ff1f25e5bba9f6f71b22&=300x700)
