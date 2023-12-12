@@ -53,7 +53,7 @@ export default function Lightning(){
         <Image source={barrefond} />
       </View>
       <View style= {{flexDirection:"row"}}>
-        <Link href="/"><Text style={{color:"white", fontSize:25}}>{"< Lighting"}</Text></Link>
+        <Link href="/"><Text style={{color:"white", fontSize:25,fontFamily: 'iransans'}}>{"< Lighting"}</Text></Link>
       </View> 
       <View style={{flex:1,justifyContent: 'center',alignItems: 'center'}}>
         {isEnabled === true ? 
